@@ -55,15 +55,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-@media only screen and (max-width:400px) {
-    .container{
-        width: 375px;
-        max-width: 375px;
-    }
-}
+
 
 .profile{
-    max-width: 280px;
+    width: 280px;
+    max-width: 95%;
     margin-bottom: 50px;
 }
 .profile,.profile-box{
@@ -114,7 +110,8 @@ body {
 }
 
 .card-bg{
-    width: 280px;    
+    width: 280px;
+    max-width: 95%;   
     position: relative;
     height: 170px;
     margin-bottom: 60px;
@@ -184,3 +181,20 @@ body {
     display: block;
 }
 
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+
+    }
+    .profile{
+        width: 95%;
+    }
+    .card-bg{
+        width: 95%;
+        margin-top: 20px;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-around;
+    }
+}
