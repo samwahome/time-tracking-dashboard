@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="weekly-active">
+  <div class="container">
+    <div class="profile dark-blue">
+      <div class="profile-box blue">
+        <div class="profile-image">
+          <img src="images/image-jeremy.png" alt="Jeremy Robson">
+        </div>
+        <div class="profile-title">Report for</div>
+        <div class="profile-name">Jeremy Robson</div>
+      </div>
+      <div class="days">
+        <ul class="menu">
+          <li><a href="#" onclick="updateTimes(this,1)">Daily</a> </li>
+          <li class="active"><a href="#" onclick="updateTimes(this,2)">Weekly</a> </li>
+          <li><a href="#" onclick="updateTimes(this,3)">Monthly</a> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="times">
+      <div class="card-bg light-red">
+        <div class="card-icon">
+          <img src="images/icon-work.svg" alt="work">
+        </div>
+        <div class="card">
+          <div class="topic">
+            <div class="topic-name">Work</div>
+            <div class="more"><a href="#"><img src="images/icon-ellipsis.svg" alt=""></a></div>
+          </div>
+          <div class="daily">5hrs <!-- daily --></div>
+          <div class="daily-previous">Yesterday - 7hrs <!-- daily --></div>
+
+          <div class="weekly">32hrs <!-- weekly --></div>
+          <div class="weekly-previous">Last Week - 36hrs <!-- weekly --></div>
+          
+          <div class="monthly">103hrs <!-- monthly --></div>
+          <div class="monthly-previous">Last Month - 128hrs <!-- monthly --></div>
+        </div>
+      </div>
+      <div class="card-bg soft-blue">
+        <div class="card-icon">
+          <img src="images/icon-play.svg" alt="work">
+        </div>
+        <div class="card">
+          <div class="topic">
+            <div class="topic-name">Play</div>
+            <div class="more"><a href="#"><img src="images/icon-ellipsis.svg" alt=""></a></div>
+          </div>
+          <div class="daily">1hr <!-- daily --></div>
+          <div class="daily-previous">Yesterday - 2hrs <!-- daily --></div>
+
+          <div class="weekly">10hrs <!-- weekly --></div>
+          <div class="weekly-previous">Last Week - 8hrs <!-- weekly --></div>
+          
+          <div class="monthly">23hrs <!-- monthly --></div>
+          <div class="monthly-previous">Last Month - 29hrs <!-- monthly --></div>
+        </div>
+      </div>
+
+
+      <div class="card-bg light-red2">
+        <div class="card-icon">
+          <img src="images/icon-study.svg" alt="work">
+        </div>
+        <div class="card">
+          <div class="topic">
+            <div class="topic-name">Study</div>
+            <div class="more"><a href="#"><img src="images/icon-ellipsis.svg" alt=""></a></div>
+          </div>
+          <div class="daily">0hrs <!-- daily --></div>
+          <div class="daily-previous">Yesterday - 1hr <!-- daily --></div>
+
+          <div class="weekly">4hrs <!-- weekly --></div>
+          <div class="weekly-previous">Last Week - 7hrs <!-- weekly --></div>
+          
+          <div class="monthly">13hrs <!-- monthly --></div>
+          <div class="monthly-previous">Last Month - 19hrs <!-- monthly --></div>
+        </div>
+      </div>    
+
+      <div class="card-bg lime-green">
+        <div class="card-icon">
+          <img src="images/icon-exercise.svg" alt="work">
+        </div>
+        <div class="card">
+          <div class="topic">
+            <div class="topic-name">Exercise</div>
+            <div class="more"><a href="#"><img src="images/icon-ellipsis.svg" alt=""></a></div>
+          </div>
+          <div class="daily">1hr <!-- daily --></div>
+          <div class="daily-previous">Yesterday - 1hr <!-- daily --></div>
+
+          <div class="weekly">4hrs <!-- weekly --></div>
+          <div class="weekly-previous">Last Week - 5hrs <!-- weekly --></div>
+          
+          <div class="monthly">11hrs <!-- monthly --></div>
+          <div class="monthly-previous">Last Month - 18hrs <!-- monthly --></div>
+        </div>
+      </div>
+
+      <div class="card-bg violet">
+        <div class="card-icon">
+          <img src="images/icon-social.svg" alt="work">
+        </div>
+        <div class="card">
+          <div class="topic">
+            <div class="topic-name">Social</div>
+            <div class="more"><a href="#"><img src="images/icon-ellipsis.svg" alt=""></a></div>
+          </div>
+          <div class="daily">1hr <!-- daily --></div>
+          <div class="daily-previous">Yesterday - 3hrs <!-- daily --></div>
+
+          <div class="weekly">5hrs <!-- weekly --></div>
+          <div class="weekly-previous">Last Week - 10hrs <!-- weekly --></div>
+          
+          <div class="monthly">21hrs <!-- monthly --></div>
+          <div class="monthly-previous">Last Month - 23hrs <!-- monthly --></div>
+        </div>
+      </div>
+
+      <div class="card-bg soft-orange">
+        <div class="card-icon">
+          <img src="images/icon-self-care.svg" alt="work">
+        </div>
+        <div class="card">
+          <div class="topic">
+            <div class="topic-name">Self Care</div>
+            <div class="more"><a href="#"><img src="images/icon-ellipsis.svg" alt=""></a></div>
+          </div>
+          <div class="daily"> 0hrs <!-- daily --></div>
+          <div class="daily-previous">Yesterday - 1hr <!-- daily --></div>
+
+          <div class="weekly">2hrs <!-- weekly --></div>
+          <div class="weekly-previous">Last Week - 2hrs <!-- weekly --></div>
+          
+          <div class="monthly">7hrs <!-- monthly --></div>
+          <div class="monthly-previous">Last Month - 11hrs <!-- monthly --></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Samuel Wahome</a>.
+  </div>
+  <script>
+      function updateTimes(el,duration = 0){
+        let bodyElement = document.getElementsByTagName("body");
+        bodyElement[0].removeAttribute("class");
+        parent = el.parentNode;
+        var firstLi = document.querySelectorAll('li.active')[0];
+        firstLi.removeAttribute("class");
+        parent.setAttribute("class","active");
+        if(duration === 1){
+          bodyElement[0].setAttribute("class","daily-active");
+        }
+        if(duration === 2){
+          bodyElement[0].setAttribute("class","weekly-active");
+        }
+        if(duration === 3){
+          bodyElement[0].setAttribute("class","monthly-active");
+        }
+        return false;
+      }
+  </script>
+</body>
+</html>
