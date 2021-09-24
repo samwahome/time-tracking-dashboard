@@ -7,13 +7,16 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+
 
 ## Overview
+
+
 
 ### The challenge
 
@@ -26,6 +29,11 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot.jpg)
+
+### Links
+
+- Solution URL: [https://samwahome.github.io/time-tracking-dashboard/](https://samwahome.github.io/time-tracking-dashboard/#)
+- Live Site URL: [https://samwahome.github.io/time-tracking-dashboard/](https://samwahome.github.io/time-tracking-dashboard/)
 
 ## My process
 
