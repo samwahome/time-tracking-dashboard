@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://samwahome.github.io/time-tracking-dashboard/](https://samwahome.github.io/time-tracking-dashboard/#)
+- Solution URL: [https://github.com/samwahome/time-tracking-dashboard](https://github.com/samwahome/time-tracking-dashboard)
 - Live Site URL: [https://samwahome.github.io/time-tracking-dashboard/](https://samwahome.github.io/time-tracking-dashboard/)
 
 ## My process
